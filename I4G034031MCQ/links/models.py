@@ -10,8 +10,4 @@ class Link(models.Model):
     created_date = models.DateTimeField
     active = models.BooleanField(default=True)
 
-    def save(self, *args, **kwargs):
-        self.slug = slugify(self.title)
-        super(Link, self).save(*args, **kwargs)
-    def __str__(self):
-        return self.title
+ 
